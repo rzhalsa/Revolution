@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <TextView
+        android:id="@+id/mainNumberPickerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/linear_layout_margin_vertical"
+        android:text="@string/numberPickerText"
+        android:textSize="@dimen/number_picker_header_text_size"
+        android:textStyle="bold"
+        android:fontFamily="@font/monstserrat"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/mainNumberPicker"/>
+
+    <NumberPicker
+        android:id="@+id/mainNumberPicker"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/number_picker_height"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/mainNumberPickerText"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/mainGridLayout"/>
+
+    <GridLayout
+        android:id="@+id/mainGridLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/grid_layout_margin_vertical"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintTop_toBottomOf="@id/mainNumberPicker"
+        app:layout_constraintBottom_toTopOf="@id/mainLinearLayout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/mainLinearLayout"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/linear_layout_margin_vertical"
+        app:layout_constraintTop_toBottomOf="@id/mainGridLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <Button
+            android:id="@+id/mainLeftButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/linear_layout_margin_horizontal"
+            android:contentDescription="@string/leftButtonDescription"
+            app:backgroundTint="@color/bottom_button_color"
+            android:background="@drawable/bottom_buttons_background"
+            android:scaleType="centerInside"
+            android:text="@string/leftButtonText"
+            android:textSize="@dimen/bottom_button_text_size"
+            android:textColor="@color/white"
+            android:tooltipText="@string/leftButtonDescription" />
+
+        <Button
+            android:id="@+id/mainUndoButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/linear_layout_margin_horizontal"
+            android:text="@string/undoButtonText"
+            android:textColor="@color/white"
+            style="@style/BottomButtonStyle"
+            app:backgroundTint="@color/bottom_button_color"
+            android:background="@drawable/bottom_buttons_background"
+            android:scaleType="centerInside"
+            android:tooltipText="@string/undoButtonDescription"
+            android:contentDescription="@string/undoButtonDescription" />
+
+        <Button
+            android:id="@+id/mainNewGameButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/linear_layout_margin_horizontal"
+            android:text="@string/newGameButtonText"
+            android:textColor="@color/white"
+            style="@style/BottomButtonStyle"
+            app:backgroundTint="@color/bottom_button_color"
+            android:background="@drawable/bottom_buttons_background"
+            android:scaleType="centerInside"
+            android:tooltipText="@string/restartButtonDescription"
+            android:contentDescription="@string/restartButtonDescription" />
+
+        <Button
+            android:id="@+id/mainRightButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/linear_layout_margin_horizontal"
+            android:contentDescription="@string/rightButtonDescription"
+            app:backgroundTint="@color/bottom_button_color"
+            android:background="@drawable/bottom_buttons_background"
+            android:scaleType="centerInside"
+            android:text="@string/rightButtonText"
+            android:textColor="@color/white"
+            style="@style/BottomButtonStyle"
+            android:tooltipText="@string/rightButtonDescription" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

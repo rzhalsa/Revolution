@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.25"/>
+
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.75"/>
+
+    <LinearLayout
+        android:id="@+id/leftLinearLayout"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/linear_layout_margin_vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/guideline_left" >
+
+        <Button
+            android:id="@+id/mainLeftButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/leftButtonDescription"
+            android:background="@drawable/bottom_buttons_background"
+            android:scaleType="centerInside"
+            android:text="@string/leftButtonText"
+            app:backgroundTint="@color/bottom_button_color"
+            android:theme="@style/BottomButtonStyle"
+            android:textColor="@color/white"
+            android:tooltipText="@string/leftButtonDescription"
+            android:layout_marginTop="@dimen/landscape_vertical_margin" />
+
+        <Button
+            android:id="@+id/mainUndoButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/undoButtonText"
+            app:backgroundTint="@color/bottom_button_color"
+            android:theme="@style/BottomButtonStyle"
+            android:textColor="@color/white"
+            android:background="@drawable/bottom_buttons_background"
+            android:scaleType="centerInside"
+            android:tooltipText="@string/undoButtonDescription"
+            android:contentDescription="@string/undoButtonDescription"
+            android:layout_marginTop="@dimen/landscape_vertical_margin" />
+
+        <Button
+            android:id="@+id/mainNewGameButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/newGameButtonText"
+            app:backgroundTint="@color/bottom_button_color"
+            android:theme="@style/BottomButtonStyle"
+            android:textColor="@color/white"
+            android:background="@drawable/bottom_buttons_background"
+            android:scaleType="centerInside"
+            android:tooltipText="@string/restartButtonDescription"
+            android:contentDescription="@string/restartButtonDescription"
+            android:layout_marginTop="@dimen/landscape_vertical_margin" />
+
+        <Button
+            android:id="@+id/mainRightButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/rightButtonDescription"
+            android:background="@drawable/bottom_buttons_background"
+            android:scaleType="centerInside"
+            android:text="@string/rightButtonText"
+            app:backgroundTint="@color/bottom_button_color"
+            android:theme="@style/BottomButtonStyle"
+            android:textColor="@color/white"
+            android:tooltipText="@string/rightButtonDescription"
+            android:layout_marginTop="@dimen/landscape_vertical_margin" />
+
+    </LinearLayout>
+
+    <!-- to be filled dynamically -->
+    <GridLayout
+        android:id="@+id/mainGridLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/guideline_left"
+        app:layout_constraintRight_toLeftOf="@id/guideline_right"
+        android:layout_marginTop="56dp" />
+
+    <LinearLayout
+        android:id="@+id/rightLinearLayout"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/linear_layout_margin_vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/guideline_right"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <TextView
+            android:id="@+id/mainNumberPickerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="@string/numberPickerText"
+            android:textSize="@dimen/number_picker_header_text_size"
+            android:textStyle="bold"
+            android:fontFamily="@font/monstserrat" />
+
+        <NumberPicker
+            android:id="@+id/mainNumberPicker"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/number_picker_height"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

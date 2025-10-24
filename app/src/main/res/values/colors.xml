@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="background">#979797</color>
+    <color name="toolbar_background">#673AB7</color>
+    <color name="dialog_background">#CB98FB</color>
+    <color name="toast_background_color">#673AB7</color>
+    <color name="bottom_button_color">@color/toolbar_background</color>
+    <color name="unselected_button_color">#D5AE2D</color>
+    <color name="selected_button_color">#B88306</color>
+    <color name="splash_screen_bg">@color/white</color>
+    <color name="reset_background">#D90202</color>
+    <color name="toolbar_text_color">@color/black</color>
+    <color name="achievement_text_color">@color/black</color>
+</resources>

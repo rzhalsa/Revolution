@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:icon="@drawable/ic_settings"
+        android:title="@string/menu_settings"
+        app:showAsAction="ifRoom" >
+        <menu>
+            <item
+                android:id="@+id/menu_3x3"
+                android:title="@string/menu_3x3" />
+            <item
+                android:id="@+id/menu_3x4"
+                android:title="@string/menu_3x4" />
+            <item
+                android:id="@+id/menu_4x4"
+                android:title="@string/menu_4x4" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/menu_surrender"
+        android:icon="@drawable/surrender_flag"
+        android:title="@string/menu_surrender"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/menu_achievement"
+        android:icon="@drawable/achievement"
+        android:title="@string/menu_achievements"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/menu_sound"
+        android:icon="@drawable/ic_sound"
+        android:title="@string/menu_sound_disable"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/menu_about"
+        android:title="@string/menu_about"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_exit"
+        android:title="@string/menu_exit"
+        android:orderInCategory="200"
+        app:showAsAction="never" />
+
+</menu>

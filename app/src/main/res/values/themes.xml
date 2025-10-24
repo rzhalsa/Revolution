@@ -1,0 +1,70 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Hw3McHenry"
+        parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:colorPrimaryDark">@color/black</item>
+        <item name="android:textColorSecondary">@color/black</item>
+    </style>
+
+    <!-- Theme for top toolbar -->
+    <style name="ToolbarTitleStyle">
+        <item name="android:fontFamily">@font/monstserrat</item>
+        <item name="android:textSize">@dimen/toolbar_text_size</item>
+        <item name="android:textColor">@color/toolbar_text_color</item>
+    </style>
+
+    <!-- Theme for gameboard button text -->
+    <style name="ButtonTextStyle">
+        <item name="android:fontFamily">@font/stories_christmas</item>
+        <item name="android:textSize">@dimen/game_button_text_size</item>
+    </style>
+
+    <!-- Theme for bottom game buttons -->
+    <style name="BottomButtonStyle">
+        <item name="android:textAppearance">@null</item>
+        <item name="android:fontFamily">@font/monstserrat</item>
+        <item name="android:textSize">@dimen/bottom_button_text_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Achievement page header theme -->
+    <style name="AchievementHeaderStyle">
+        <item name="android:textColor">@color/achievement_text_color</item>
+        <item name="android:fontFamily">@font/monstserrat</item>
+    </style>
+
+    <!-- Achievement text theme -->
+    <style name="AchievementTextStyle">
+        <item name="android:width">@dimen/achievement_text_width</item>
+        <item name="android:height">@dimen/achievement_text_height</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/box_text_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/achievement_text_color</item>
+        <item name="android:fontFamily">@font/monstserrat</item>
+    </style>
+
+    <!-- Achievement text box theme -->
+    <style name="AchievementBoxStyle" parent="AchievementTextStyle">
+        <item name="android:background">@drawable/achievement_textboxes_background</item>
+    </style>
+
+    <!-- Theme for solution depth text -->
+    <style name="SolDepthTextStyle" parent="AchievementTextStyle">
+        <item name="android:width">@dimen/soldepth_text_height</item>
+    </style>
+
+    <!-- Theme for solution depth boxes -->
+    <style name="SolDepthBoxStyle" parent="SolDepthTextStyle">
+        <item name="android:background">@drawable/achievement_textboxes_background</item>
+    </style>
+
+    <style name="Theme.Hw3McHenry" parent="Base.Theme.Hw3McHenry" />
+
+    <!-- Splashscreen theme -->
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/splash_screen_bg</item>
+        <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_logo</item>
+        <item name="postSplashScreenTheme">@style/Base.Theme.Hw3McHenry</item>
+    </style>
+</resources>

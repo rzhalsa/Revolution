@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".AchievementActivity">
+
+    <!-- Main "Achievement" text at the top -->
+    <TextView
+        android:id="@+id/achievementText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/textview_margin_vertical"
+        android:layout_gravity="top"
+        android:text="@string/achievements"
+        android:textSize="@dimen/achievement_text_size"
+        android:textStyle="bold"
+        android:theme="@style/AchievementHeaderStyle"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/boardSizeAchievements"/>
+
+
+    <!-- Board size achievement group -->
+    <LinearLayout
+        android:id="@+id/boardSizeAchievements"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/achievementText"
+        app:layout_constraintBottom_toTopOf="@id/solDepthAchievements"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <!-- Text for board size achievement subsection -->
+        <TextView
+            android:id="@+id/gridSizeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/textview_margin_vertical"
+            android:text="@string/board_size"
+            android:textSize="@dimen/header_achievement_text_size"
+            android:textStyle="bold"
+            android:theme="@style/AchievementHeaderStyle" />
+
+        <!-- Board size text -->
+        <LinearLayout
+            android:id="@+id/gridSizeLinearLayout"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/linear_layout_margin_vertical">
+
+            <TextView
+                android:id="@+id/threeByThreeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/linear_layout_margin_horizontal"
+                android:text="@string/menu_3x3"
+                android:theme="@style/AchievementTextStyle"/>
+
+            <TextView
+                android:id="@+id/threeByFourText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/linear_layout_margin_horizontal"
+                android:text="@string/menu_3x4"
+                android:theme="@style/AchievementTextStyle"/>
+
+            <TextView
+                android:id="@+id/fourByFourText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/linear_layout_margin_horizontal"
+                android:text="@string/menu_4x4"
+                android:theme="@style/AchievementTextStyle"/>
+
+        </LinearLayout>
+
+        <!-- Boxes to hold player achievement markers for board size -->
+        <LinearLayout
+            android:id="@+id/gridSizeCheckboxes"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/threeByThreeBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/linear_layout_margin_horizontal"
+                android:text="@string/cross"
+                android:theme="@style/AchievementBoxStyle"/>
+
+            <TextView
+                android:id="@+id/threeByFourBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/linear_layout_margin_horizontal"
+                android:text="@string/cross"
+                android:theme="@style/AchievementBoxStyle"/>
+
+            <TextView
+                android:id="@+id/fourByFourBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/linear_layout_margin_horizontal"
+                android:text="@string/cross"
+                android:theme="@style/AchievementBoxStyle"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <!-- Solution depth achievement group -->
+    <LinearLayout
+        android:id="@+id/solDepthAchievements"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/boardSizeAchievements"
+        app:layout_constraintBottom_toTopOf="@id/resetButton"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <!-- Text for solution depth achievement subsection -->
+        <TextView
+            android:id="@+id/solDepthText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/textview_margin_vertical"
+            android:text="@string/solution_depth"
+            android:textSize="@dimen/header_achievement_text_size"
+            android:textStyle="bold"
+            android:theme="@style/AchievementHeaderStyle" />
+
+        <!-- Solution depth text -->
+        <LinearLayout
+            android:id="@+id/solDepthLinearLayout"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/linear_layout_margin_vertical">
+
+            <TextView
+                android:id="@+id/solOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/linear_layout_margin_horizontal"
+                android:text="@string/one"
+                android:theme="@style/SolDepthTextStyle"/>
+
+            <TextView
+                android:id="@+id/solTwo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/linear_layout_margin_horizontal"
+                android:text="@string/two"
+                android:theme="@style/SolDepthTextStyle"/>
+
+            <TextView
+                android:id="@+id/solThree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/linear_layout_margin_horizontal"
+                android:text="@string/three"
+                android:theme="@style/SolDepthTextStyle"/>
+
+            <TextView
+                android:id="@+id/solFour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/linear_layout_margin_horizontal"
+                android:text="@string/four"
+                android:theme="@style/SolDepthTextStyle"/>
+
+            <TextView
+                android:id="@+id/solFive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/linear_layout_margin_horizontal"
+                android:text="@string/five"
+                android:theme="@style/SolDepthTextStyle"/>
+
+            <TextView
+                android:id="@+id/solSix"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/linear_layout_margin_horizontal"
+                android:text="@string/six"
+                android:theme="@style/SolDepthTextStyle"/>
+
+            <TextView
+                android:id="@+id/solSeven"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/linear_layout_margin_horizontal"
+                android:text="@string/seven"
+                android:theme="@style/SolDepthTextStyle"/>
+
+            <TextView
+                android:id="@+id/solEight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/linear_layout_margin_horizontal"
+                android:text="@string/eight"
+                android:theme="@style/SolDepthTextStyle"/>
+
+        </LinearLayout>
+
+        <!-- Boxes to hold player achievements for solution depth -->
+        <LinearLayout
+            android:id="@+id/solDepthCheckboxes"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/solOneBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/linear_layout_margin_horizontal"
+                android:text="@string/cross"
+                android:theme="@style/SolDepthBoxStyle"/>
+
+            <TextView
+                android:id="@+id/solTwoBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/linear_layout_margin_horizontal"
+                android:text="@string/cross"
+                android:theme="@style/SolDepthBoxStyle"/>
+
+            <TextView
+                android:id="@+id/solThreeBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/linear_layout_margin_horizontal"
+                android:text="@string/cross"
+                android:theme="@style/SolDepthBoxStyle"/>
+
+            <TextView
+                android:id="@+id/solFourBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/linear_layout_margin_horizontal"
+                android:text="@string/cross"
+                android:theme="@style/SolDepthBoxStyle"/>
+
+            <TextView
+                android:id="@+id/solFiveBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/linear_layout_margin_horizontal"
+                android:text="@string/cross"
+                android:theme="@style/SolDepthBoxStyle"/>
+
+            <TextView
+                android:id="@+id/solSixBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/linear_layout_margin_horizontal"
+                android:text="@string/cross"
+                android:theme="@style/SolDepthBoxStyle"/>
+
+            <TextView
+                android:id="@+id/solSevenBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/linear_layout_margin_horizontal"
+                android:text="@string/cross"
+                android:theme="@style/SolDepthBoxStyle"/>
+
+            <TextView
+                android:id="@+id/solEightBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/linear_layout_margin_horizontal"
+                android:text="@string/cross"
+                android:theme="@style/SolDepthBoxStyle"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <!-- Button to reset player achievements -->
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reset"
+        android:textStyle="bold"
+        android:textSize="@dimen/bottom_button_text_size"
+        android:fontFamily="@font/monstserrat"
+        android:textColor="@color/white"
+        android:background="@drawable/reset_button_background"
+        app:backgroundTint="@color/reset_background"
+        android:scaleType="centerInside"
+        android:layout_gravity="bottom"
+        app:layout_constraintTop_toBottomOf="@id/solDepthAchievements"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

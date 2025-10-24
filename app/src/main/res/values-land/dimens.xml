@@ -1,0 +1,24 @@
+<resources>
+    <dimen name="toolbar_text_size">20sp</dimen>
+
+    <dimen name="textview_margin_vertical">3dp</dimen>
+    <dimen name="textview_margin_vertical_big">10dp</dimen>
+    <dimen name="grid_layout_margin_vertical">24dp</dimen>
+    <dimen name="linear_layout_margin_vertical">8dp</dimen>
+    <dimen name="linear_layout_margin_horizontal">6dp</dimen>
+    <dimen name="landscape_vertical_margin">6dp</dimen>
+    <dimen name="landscape_gameboard_vertical_margin">6dp</dimen>
+
+    <dimen name="number_picker_header_text_size">12sp</dimen>
+    <dimen name="number_picker_height">120dp</dimen>
+
+    <dimen name="game_button_text_size">50sp</dimen>
+    <dimen name="bottom_button_text_size">16sp</dimen>
+    <dimen name="achievement_text_size">18sp</dimen>
+    <dimen name="header_achievement_text_size">14sp</dimen>
+    <dimen name="box_text_size">14sp</dimen>
+
+    <dimen name="achievement_text_width">36dp</dimen>
+    <dimen name="achievement_text_height">18dp</dimen>
+    <dimen name="soldepth_text_height">12dp</dimen>
+</resources>
